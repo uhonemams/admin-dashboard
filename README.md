@@ -1,6 +1,6 @@
 # Admin Dashboard for Report Management
 
-This project is an **Admin Dashboard** designed to manage reports submitted through a **mobile application** developed using **Flutter**. The dashboard allows administrators to view, manage, and act upon reports, offering functionalities like filtering by urgency level, assigning reports to team members, and tracking report statuses. The application is built with **React** for the frontend and **Firebase** for hosting and backend services.
+This project is an **Admin Dashboard** designed to manage pipelines leakages reports submitted through a **mobile application** developed using **Flutter**. The dashboard allows administrators to view, manage, and act upon reports, offering functionalities like filtering by urgency level, assigning reports to team members, and tracking report statuses. The application is built with **React** for the frontend and **Firebase** for hosting and backend services.
 
 ## Table of Contents
 - [Demo](#demo)
@@ -18,6 +18,7 @@ A live version of the application is available at: [Admin Dashboard Live Demo](h
 - **Report Management:** View, filter, and manage reports submitted via the Flutter mobile application.
 - **Status Tracking:** Change the status of reports (e.g., in progress, rejected, or completed).
 - **Urgency Filtering:** Easily filter reports by urgency level for quick prioritization.
+- **Province Filtering:** Easily filter reports by province for quick prioritization.
 - **Employee Assignment:** Assign reports to specific team members.
 - **Geolocation:** View the location of reports using Google Maps.
 - **Notification System:** Pop-up notifications for successful actions like marking a report as "In Progress".
