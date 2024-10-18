@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# Admin Dashboard for Report Management
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is an **Admin Dashboard** designed to manage reports submitted through a **mobile application** developed using **Flutter**. The dashboard allows administrators to view, manage, and act upon reports, offering functionalities like filtering by urgency level, assigning reports to team members, and tracking report statuses. The application is built with **React** for the frontend and **Firebase** for hosting and backend services.
 
-## Available Scripts
+## Table of Contents
+- [Demo](#demo)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Setup and Installation](#setup-and-installation)
+- [Firebase Deployment](#firebase-deployment)
+- [Usage](#usage)
 
-In the project directory, you can run:
+## **Demo**
+A live version of the application is available at: [Admin Dashboard Live Demo](https://spillaged-test.web.app/login)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Report Management:** View, filter, and manage reports submitted via the Flutter mobile application.
+- **Status Tracking:** Change the status of reports (e.g., in progress, rejected, or completed).
+- **Urgency Filtering:** Easily filter reports by urgency level for quick prioritization.
+- **Employee Assignment:** Assign reports to specific team members.
+- **Geolocation:** View the location of reports using Google Maps.
+- **Notification System:** Pop-up notifications for successful actions like marking a report as "In Progress".
+- **Responsive Design:** The dashboard is designed to work on various screen sizes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- **Frontend:**
+  - React
+  - Bootstrap (for responsiveness)
+  - Firebase Hosting (for deployment)
+- **Backend:**
+  - Firebase Firestore (for database and storage)
+  
+- **Mobile App (Reports Source):**
+  - Developed using **Flutter**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup and Installation
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Before you begin, ensure you have the following installed:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Node.js](https://nodejs.org/) (v18.20.4 or later)
+- [Firebase CLI](https://firebase.google.com/docs/cli)
+- A Firebase project (set up in the [Firebase Console](https://console.firebase.google.com/))
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Steps
 
-### `npm run eject`
+1. **Clone the repository:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   git clone https://github.com/your-username/admin-dashboard.git
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Navigate to the project directory:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   cd admin-dashboard
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. **Install dependencies:**
 
-## Learn More
+   ```bash
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **Set up Firebase:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   Make sure you have a Firebase project set up. Run the following to configure Firebase for your project:
 
-### Code Splitting
+   ```bash
+   firebase init
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   Select **Hosting** and choose your Firebase project. When prompted, set the public directory to `build`.
 
-### Analyzing the Bundle Size
+5. **Build the project:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   Before deploying, create a production build:
 
-### Making a Progressive Web App
+   ```bash
+   npm run build
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+6. **Deploy to Firebase:**
 
-### Advanced Configuration
+   After building, deploy the app using Firebase Hosting:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   ```bash
+   firebase deploy
+   ```
 
-### Deployment
+## Firebase Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The application uses Firebase Hosting for deployment. After running the `firebase deploy` command, Firebase will provide you with a hosting URL. You can access the live admin dashboard using this URL.
 
-### `npm run build` fails to minify
+### Key Firebase Services Used:
+- **Firebase Firestore:** Used to store reports, user data, and assignments.
+- **Firebase Hosting:** Used to host the React application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Usage
+
+- **Viewing Reports:** Once logged in, the dashboard displays reports submitted via the mobile app. Admins can filter reports by urgency, view report details, and assign reports to team members.
+- **Assigning Reports:** Use the "Assign Report" dropdown to assign a report to a team member.
+- **Changing Status:** Update the report status to "In Progress" or "Completed" using the available buttons.
+- **Viewing Locations:** Click on the "View Location" link to see the report location on Google Maps.
